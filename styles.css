@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ff00bb;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 20px;
+}
+
+.flipbook {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
+}
+
+.page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(165, 67, 230);
+    border: 1px solid #000000;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transform-origin: left;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+.page img {
+    max-width: 100%;
+    height: auto;
+}
+
+.page h2 {
+    margin: 0 0 15px 0; /* Menambahkan jarak bawah untuk h2 */
+    color: #000000;
+    font-size: 1.5em;
+}
+
+.page p {
+    font-size: 1em;
+    color: #000000;
+    line-height: 1.6;
+    margin: 0; /* Menghilangkan margin default dari paragraf */
+}
+#imgPage2, #imgPage3, #imgPage4, #imgPage5,
+#txtPage2, #txtPage3, #txtPage4, #txtPage5 {
+    transform: rotateY(-180deg);
+}
+
+button {
+    margin: 10px;
+    padding: 10px 20px;
+    background-color: #031cfe;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #000000;
+}
+
